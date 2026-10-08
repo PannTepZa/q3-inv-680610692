@@ -72,10 +72,10 @@ export const useItemStore = create<ItemState>()(
           inventory: [
             {
               id: Date.now().toString(),
-              name,
-              quantity,
-              price,
-              category,
+              name : name,
+              quantity : quantity,
+              price : price,
+              category : category,
               date: new Date().toISOString().split("T")[0],
             },
             ...state.inventory,

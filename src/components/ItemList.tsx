@@ -34,7 +34,7 @@ export function ItemList() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {inventory.length === 0 ? (
+            {inventory.length === 0 && (
               <TableRow>
                 <TableCell
                   colSpan={7}
@@ -43,17 +43,16 @@ export function ItemList() {
                   No products in stock yet.
                 </TableCell>
               </TableRow>
-            ) : (
-              // replace the following hardcoded row with the dynamic mapping of data items
-              <TableRow>
-                <TableCell>
-                  <Badge variant="outline">Electronics</Badge>
-                </TableCell>
-                <TableCell className="font-medium">Apple Airpod 5</TableCell>
-                <TableCell className="text-right">10</TableCell>
-                <TableCell className="text-right">฿4000.00</TableCell>
-                <TableCell className="text-right font-semibold">
-                  ฿{(10 * 4000).toFixed(2)}
+            )}
+
+            {inventory.map((items) => (
+              <TableRow key={items.category}>
+                  <Badge variant="outline">{items.category}</Badge>
+                  <TableCell className="font-medium">{items.name}</TableCell>
+                  <TableCell className="text-right">{items.quantity}</TableCell>
+                  <TableCell className="text-right">{items.price}</TableCell>
+                  <TableCell className="text-right font-semibold">
+                  ฿{(items.quantity * items.price).toFixed(2)}
                 </TableCell>
                 <TableCell className="text-muted-foreground">
                   2026-10-05
@@ -68,8 +67,7 @@ export function ItemList() {
                     Delete
                   </Button>
                 </TableCell>
-              </TableRow>
-            )}
+              </TableRow>))}
           </TableBody>
         </Table>
       </CardContent>
