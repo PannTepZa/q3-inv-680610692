@@ -9,7 +9,7 @@ import { Drawer,
   DrawerFooter,
   DrawerTitle,
   DrawerDescription } from '@/components/ui/drawer';
-import { Toggle } from '@base-ui/react';
+import { Toggle, ToggleGroup } from '@base-ui/react';
 export function StudentInfo() {
   return (
     // Use Drawer component to display student information

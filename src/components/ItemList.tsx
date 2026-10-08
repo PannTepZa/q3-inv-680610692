@@ -47,7 +47,7 @@ export function ItemList() {
 
             {inventory.map((items) => (
               <TableRow key={items.category}>
-                  <Badge variant="outline">{items.category}</Badge>
+                  <Badge variant="outline" className="text-middle">{items.category}</Badge>
                   <TableCell className="font-medium">{items.name}</TableCell>
                   <TableCell className="text-right">{items.quantity}</TableCell>
                   <TableCell className="text-right">{items.price}</TableCell>
