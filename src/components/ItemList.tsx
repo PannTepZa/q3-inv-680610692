@@ -62,6 +62,7 @@ export function ItemList() {
                     className="text-white bg-red-500 hover:bg-red-600 text-white"
                     variant="ghost"
                     size="sm"
+                    type="submit"
                   >
                     <Trash className="h-4 w-4" />
                     Delete

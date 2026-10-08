@@ -1,5 +1,7 @@
 import { useItemStore } from '@/store/dataStore';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, Drawer } from '@base-ui/react';
+import { TabsContent } from './ui/tabs';
 
 export function OverviewCards() {
   const inventory = useItemStore((state) => state.inventory);
@@ -10,6 +12,7 @@ export function OverviewCards() {
   inventory.map((q) => totalunit = totalunit + q.quantity);
   inventory.map((q) => totalvalue = totalvalue + (q.price * q.quantity));
   return (
+    
     <div className="grid gap-4 md:grid-cols-3">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2">

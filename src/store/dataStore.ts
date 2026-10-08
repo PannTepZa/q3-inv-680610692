@@ -82,6 +82,11 @@ export const useItemStore = create<ItemState>()(
           ],
         })),
 
+        // removeItems: (items) =>
+        // set((state) => ({
+         
+        // })),
+
     }),
     {
       // Unique key name for the localStorage entry

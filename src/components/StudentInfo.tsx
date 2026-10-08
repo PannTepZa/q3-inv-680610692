@@ -1,3 +1,15 @@
+import { Drawer,
+  DrawerPortal,
+  DrawerOverlay,
+  DrawerSwipeHandle,
+  DrawerTrigger,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription } from '@/components/ui/drawer';
+import { Toggle } from '@base-ui/react';
 export function StudentInfo() {
   return (
     // Use Drawer component to display student information
